@@ -15,7 +15,7 @@ Project Pipeline
 8. Compare with manual annotations
 9. Calculate absolute error
 10. Calculate mean error
-11. Apply threshold (60/70/80/90 ms)
+11. Apply threshold 
 12. Flag incorrect annotations
 13. Generate validation report
 
@@ -25,13 +25,22 @@ MP3_FILES/          Original audio files
 WAV_FILES/          Converted WAV files
 TRANSCRIPTS/        Transcript text files
 ANNOTATIONS/        Manual annotation files
-OUTPUT/             Results
 
-Suggested Scripts
 
-convert_mp3_to_wav.py
+ Scripts
+
 validate_dataset.py
-hubert_alignment.py
-compare_annotations.py
-generate_report.py
-main.py
+generate_model_timestamps.py
+batch_compare_annotation.py
+flagged_files.text
+excluded_files.text
+
+#for TIMIT
+Folder Description:
+TRAIN
+
+files Description:
+
+count_timit_files.py
+generate_timit_timestamps.py
+compare_timit_annotations.py

@@ -45,10 +45,6 @@ total_end_error = 0.0
 all_word_errors = []
 file_word_errors = {}
 
-# ----------------------------------
-# PASS 1
-# ----------------------------------
-
 for file in os.listdir(ANNOTATIONS_DIR):
 
     if not file.endswith("_Annotated.txt"):
@@ -123,9 +119,6 @@ for file in os.listdir(ANNOTATIONS_DIR):
 
         total_words += 1
 
-# ----------------------------------
-# MEAN ERRORS
-# ----------------------------------
 
 mean_start_error = (
     total_start_error /
@@ -144,9 +137,6 @@ threshold_ms = (
     ) * 2
 )
 
-# ----------------------------------
-# PASS 2
-# ----------------------------------
 
 flagged_words = 0
 red_flag_files = 0
@@ -191,9 +181,6 @@ percentage_flagged = (
     total_words
 ) * 100
 
-# ----------------------------------
-# validation_report.csv
-# ----------------------------------
 
 with open(
     "validation_report.csv",
